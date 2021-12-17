@@ -9,7 +9,7 @@ A Convolutional Neural Network (ConvNet/CNN) is a Deep Learning system that can 
 ### **LSTM(Decoder)**
 Recurrent neural networks RNNs have an issue with long-term dependency (due to the vanishing gradient problem), and LSTM networks were created to solve that problem. Unlike more standard feedforward neural networks, LSTMs feature feedback connections. This trait allows LSTMs to process complete data sequences (e.g. time series) without having to handle each point in the sequence separately, instead of preserving important knowledge about prior data in the sequence to aid in processing incoming data points.
 
-` `As a result, LSTMs excel at processing data sequences like text, speech, and time series in general.
+As a result, LSTMs excel at processing data sequences like text, speech, and time series in general.
 
 The Decoder is a Recurrent Neural Network (generally LSTM ) that does language modeling up to the word level. The first time step receives the encoded output from the encoder and also the <START> vector.
 ## **Model Architecture**
@@ -28,7 +28,9 @@ For the encoder part, the pretrained CNN extracts the feature vector from a give
 Pre-processing and cleaning data is an important part of building a model. When we understand the data, we can build more accurate models.
 
 We used the **Flickr8k dataset.** It is a freely available dataset for image captioning dataset containing 5 labels (Captions) for each image.
-
+  
+https://www.kaggle.com/dataset/e1cd22253a9b23b073794872bf565648ddbe4f17e7fa9e74766ad3707141adeb
+  
 The details about the dataset are:
 
 - There are 8092 images in this Flickr8k\_Dataset, all in JPEG format with different shapes and sizes. They are divided between training, testing, and development.
@@ -38,9 +40,26 @@ The model has been trained to only around 80 epochs, with intermittent allowing 
 ## **Metric used for evaluation:**
 ### **BLEU Score**
 The Bilingual Evaluation Understudy Score, or BLEU for short, is a measurement for assessing a produced sentence to a reference sentence. 
-
 An ideal match brings about a score of 1.0, while an ideal befuddle brings about a score of 0.0.
+  
+## **Implement**
+  -> Clone this repository\
+  -> Download the flickr8 dataset and place as follows\
+  **flickr8k\
+          |__images\
+          |__captions**
+  
+  
+  Run train.py to start training.
+  
+  Examine/change model.py to affect network model.
+
 ## **To Do**
   Add Attention mechanism in the code.
   Include BLEU Score as a metric while trainining so we monitor BLEU Score with epochs.
   Train for more Epochs
+  
+ 
+  
+ 
+
