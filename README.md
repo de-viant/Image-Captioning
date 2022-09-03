@@ -1,4 +1,4 @@
-# Image-Captioning
+# Image-Captioning using python
 Using Inception V3 and LSTM
 
 # **Problem Statement**
